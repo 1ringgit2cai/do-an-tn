@@ -1,15 +1,15 @@
 @extends('admin.layouts.app')
-@section('title', 'Sửa Khóa Luận')
+@section('title', 'Sửa Luận Văn')
 
 @section('content')
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
-            <div class="col-sm-6"><h1>Sửa Khóa Luận</h1></div>
+            <div class="col-sm-6"><h1>Sửa Luận Văn</h1></div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Trang Chủ</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('admin.theses.index') }}">Khóa Luận</a></li>
+                    <li class="breadcrumb-item"><a href="{{ route('admin.theses.index') }}">Luận Văn</a></li>
                     <li class="breadcrumb-item active">Sửa</li>
                 </ol>
             </div>
@@ -28,7 +28,7 @@
             @method('PUT')
 
             <div class="card card-primary">
-                <div class="card-header"><h3 class="card-title">Cập Nhật Khóa Luận</h3></div>
+                <div class="card-header"><h3 class="card-title">Cập Nhật Luận Văn</h3></div>
                 <div class="card-body">
                     <div class="form-group">
                         <label>Tiêu Đề</label>

@@ -47,43 +47,55 @@
                         <tr>
                             <th>STT</th>
                             <th>Tiêu Đề</th>
+                            <th>Phân Loại</th>
                             <th>Hình Ảnh</th>
                             <th>Ngày Đăng</th>
                             <th>Hành Động</th>
+                            
                         </tr>
                     </thead>
-                    <tbody>
-                        @forelse ($announcements as $index => $item)
-                            <tr>
-                                <td>{{ ($page - 1) * 10 + $index + 1 }}</td>
-                                <td>{{ $item['title'] }}</td>
-                                <td>
-                                    @if ($item['cover_image'])
-                                        <img src="http://127.0.0.1:3001{{ $item['cover_image'] }}" width="200" height="100" alt="Cover">
-                                    @else
-                                        <span class="text-muted">Không có ảnh</span>
-                                    @endif
-                                </td>
-                                <td>{{ \Carbon\Carbon::parse($item['posted_at'])->format('d/m/Y H:i') }}</td>
-                                <td>
-                                    <a href="{{ route('admin.announcements.edit', $item['id']) }}" class="btn btn-warning btn-sm">
-                                        <i class="fas fa-edit"></i> Sửa
-                                    </a>
-                                    <form action="{{ route('admin.announcements.destroy', $item['id']) }}" method="POST" style="display:inline;">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Xóa thông báo này?')">
-                                            <i class="fas fa-trash"></i> Xóa
-                                        </button>
-                                    </form>
-                                </td>
-                            </tr>
-                        @empty
-                            <tr class="text-center">
-                                <td colspan="5">Không có thông báo nào.</td>
-                            </tr>
-                        @endforelse
-                    </tbody>
+                   <tbody>
+    @forelse ($announcements as $index => $item)
+        <tr>
+            <td>{{ ($page - 1) * 10 + $index + 1 }}</td>
+            <td>{{ $item['title'] }}</td>
+
+            {{-- Phân loại --}}
+            <td>{{ $item['category'] ?? 'Chưa có' }}</td>
+
+            {{-- Hình ảnh --}}
+            <td>
+                @if ($item['cover_image'])
+                    <img src="http://127.0.0.1:3001{{ $item['cover_image'] }}" width="200" height="100" alt="Cover">
+                @else
+                    <span class="text-muted">Không có ảnh</span>
+                @endif
+            </td>
+
+            {{-- Ngày đăng --}}
+            <td>{{ \Carbon\Carbon::parse($item['posted_at'])->format('d/m/Y H:i') }}</td>
+
+            {{-- Hành động --}}
+            <td>
+                <a href="{{ route('admin.announcements.edit', $item['id']) }}" class="btn btn-warning btn-sm">
+                    <i class="fas fa-edit"></i> Sửa
+                </a>
+                <form action="{{ route('admin.announcements.destroy', $item['id']) }}" method="POST" style="display:inline;">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Xóa thông báo này?')">
+                        <i class="fas fa-trash"></i> Xóa
+                    </button>
+                </form>
+            </td>
+        </tr>
+    @empty
+        <tr class="text-center">
+            <td colspan="6">Không có thông báo nào.</td>
+        </tr>
+    @endforelse
+</tbody>
+
                 </table>
             </div>
 

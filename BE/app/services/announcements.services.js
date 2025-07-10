@@ -10,9 +10,7 @@ class announcementService {
 
     try {
       const { count, rows } = await Announcement.findAndCountAll({
-        where: search
-          ? { title: { [Op.like]: `%${search}%` } }
-          : undefined,
+        where: search ? { title: { [Op.like]: `%${search}%` } } : undefined,
         order: [["posted_at", "DESC"]],
         limit: parseInt(limit),
         offset: (parseInt(page) - 1) * parseInt(limit),
@@ -39,7 +37,7 @@ class announcementService {
   // [POST] /announcements
   async store(req, res) {
     try {
-      const { title, content, posted_at } = req.body;
+      const { title, content, posted_at, category } = req.body;
       const file = req.file;
 
       if (!title || !content) {
@@ -56,6 +54,7 @@ class announcementService {
         content,
         posted_at,
         cover_image,
+        category,
       });
 
       res.status(201).json(newItem);
@@ -67,7 +66,7 @@ class announcementService {
   // [PUT] /announcements/:id
   async update(req, res) {
     try {
-      const { title, content, posted_at } = req.body;
+      const { title, content, posted_at, category } = req.body;
 
       const file = req.file;
 
@@ -85,6 +84,7 @@ class announcementService {
       item.title = title;
       item.content = content;
       item.posted_at = posted_at;
+      item.category = category;
 
       await item.save();
       res.json(item);

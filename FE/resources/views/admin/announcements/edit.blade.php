@@ -36,8 +36,20 @@
                     </div>
 
                     <div class="form-group">
+                        <label>Phân Loại Thông Báo</label>
+                        <select name="category" class="form-control" required>
+                            <option value="">-- Chọn phân loại --</option>
+                           <option value="Học vụ" {{ old('category') == 'Học vụ' ? 'selected' : '' }}>Học vụ</option>
+                                    <option value="Khẩn cấp" {{ old('category') == 'Khẩn cấp' ? 'selected' : '' }}>Khẩn cấp</option>
+                                    <option value="Tuyển sinh" {{ old('category') == 'Tuyển sinh' ? 'selected' : '' }}>Tuyển sinh</option>
+                                    <option value="Hoạt động" {{ old('category') == 'Hoạt động' ? 'selected' : '' }}>Hoạt động</option>
+                                    <option value="Khác" {{ old('category') == 'Khác' ? 'selected' : '' }}>Khác</option>
+                                </select>
+                    </div>
+
+                    <div class="form-group">
                         <label>Hình Ảnh</label><br>
-                        @if ($announcement['cover_image'])
+                        @if (!empty($announcement['cover_image']))
                             <img src="http://127.0.0.1:3001{{ $announcement['cover_image'] }}" alt="Cover" width="200" class="mb-2"><br>
                         @endif
                         <input type="file" class="form-control-file" name="cover_image" accept="image/*">

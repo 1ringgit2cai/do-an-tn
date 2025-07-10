@@ -64,7 +64,7 @@
 
     <!-- Announcements -->
     <section class="container mb-5">
-        <h2 class="section-title mb-5">Cổng thông tin</h2>
+        <h2 class="section-title mb-5">Thông báo</h2>
         <div class="row g-4">
             @foreach ($announcements as $index => $item)
                 <div class="col-md-6 col-lg-4">
@@ -124,28 +124,28 @@
             <div class="col-md-3">
                 <div class="stats-card shadow-sm">
                     <i class="fas fa-book fa-2x text-primary mb-2"></i>
-                    <h3>120+</h3>
+                    <!-- <h3>120+</h3> -->
                     <p>Môn học</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="stats-card shadow-sm">
                     <i class="fas fa-chalkboard-teacher fa-2x text-success mb-2"></i>
-                    <h3>35+</h3>
+                    <!-- <h3>35+</h3> -->
                     <p>Giảng viên</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="stats-card shadow-sm">
                     <i class="fas fa-file-alt fa-2x text-warning mb-2"></i>
-                    <h3>500+</h3>
+                    <!-- <h3>500+</h3> -->
                     <p>Tài liệu</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="stats-card shadow-sm">
                     <i class="fas fa-scroll fa-2x text-danger mb-2"></i>
-                    <h3>180+</h3>
+                    <!-- <h3>180+</h3> -->
                     <p>Luận văn</p>
                 </div>
             </div>
@@ -154,7 +154,7 @@
 
     <!-- Documents -->
     <section class="container mb-5">
-        <h2 class="section-title mb-4">Tài nguyên</h2>
+        <h2 class="section-title mb-4">Tài liệu</h2>
 
         <div class="row g-3 mt-3">
             @foreach ($documents as $index => $item)

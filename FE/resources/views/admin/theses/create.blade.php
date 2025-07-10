@@ -1,5 +1,5 @@
 @extends('admin.layouts.app')
-@section('title', 'Thêm Khóa Luận')
+@section('title', 'Thêm Luận Văn')
 
 @section('content')
 
@@ -7,13 +7,13 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Quản Lý Khóa Luận</h1>
+                <h1>Quản Lý Luận Văn</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Trang Chủ</a></li>
                     <li class="breadcrumb-item"><a href="{{ route('admin.theses.index') }}">Quản Lý Khóa Luận</a></li>
-                    <li class="breadcrumb-item active">Thêm Khóa Luận</li>
+                    <li class="breadcrumb-item active">Thêm Luận Văn</li>
                 </ol>
             </div>
         </div>
@@ -26,7 +26,7 @@
             <div class="col-md-12">
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Nhập thông tin khóa luận</h3>
+                        <h3 class="card-title">Nhập thông tin luận văn</h3>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('admin.theses.store') }}" enctype="multipart/form-data">
@@ -57,14 +57,14 @@
                             </div>
 
                             <div class="form-group">
-                                <label>File Khóa Luận (PDF)</label>
+                                <label>File Luận Văn (PDF)</label>
                                 <input type="file" class="form-control-file" name="file_path" accept=".pdf" required>
                                 @error('file_path') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
 
                             <div class="text-right">
                                 <a class="btn btn-secondary" href="{{ route('admin.theses.index') }}">Quay Lại</a>
-                                <button type="submit" class="btn btn-primary">Thêm Khóa Luận</button>
+                                <button type="submit" class="btn btn-primary">Thêm Luận Văn</button>
                             </div>
                         </form>
                     </div>

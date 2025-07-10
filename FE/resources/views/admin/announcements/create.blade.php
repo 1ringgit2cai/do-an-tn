@@ -29,6 +29,10 @@
                         <h3 class="card-title">Nhập thông tin thông báo</h3>
                     </div>
                     <div class="card-body">
+                        @if ($errors->any())
+                            <div class="alert alert-danger">{{ $errors->first() }}</div>
+                        @endif
+
                         <form method="POST" action="{{ route('admin.announcements.store') }}" enctype="multipart/form-data">
                             @csrf
 
@@ -36,6 +40,19 @@
                                 <label>Tiêu Đề</label>
                                 <input type="text" class="form-control" name="title" value="{{ old('title') }}" placeholder="Nhập tiêu đề" required>
                                 @error('title') <span class="text-danger">{{ $message }}</span> @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label>Phân Loại Thông Báo</label>
+                                <select class="form-control" name="category" required>
+                                    <option value="">-- Chọn phân loại --</option>
+                                    <option value="Học vụ" {{ old('category') == 'Học vụ' ? 'selected' : '' }}>Học vụ</option>
+                                    <option value="Khẩn cấp" {{ old('category') == 'Khẩn cấp' ? 'selected' : '' }}>Khẩn cấp</option>
+                                    <option value="Tuyển sinh" {{ old('category') == 'Tuyển sinh' ? 'selected' : '' }}>Tuyển sinh</option>
+                                    <option value="Hoạt động" {{ old('category') == 'Hoạt động' ? 'selected' : '' }}>Hoạt động</option>
+                                    <option value="Khác" {{ old('category') == 'Khác' ? 'selected' : '' }}>Khác</option>
+                                </select>
+                                @error('category') <span class="text-danger">{{ $message }}</span> @enderror
                             </div>
 
                             <div class="form-group">
@@ -67,6 +84,7 @@
         </div>
     </div>
 </section>
+
 <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
 <script>
     ClassicEditor
@@ -74,4 +92,3 @@
         .catch(error => console.error(error));
 </script>
 @endsection
-

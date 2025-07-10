@@ -24,7 +24,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top" style="background-color: #1a237e;">
         <div class="container">
             <a class="navbar-brand fw-bold d-flex align-items-center" href="{{ route('web.home') }}" style="max-width: 250px">
-                <img src="https://tuyensinh.hcmus.edu.vn/wp-content/uploads/2024/11/logo-tuyen-sinh-nen-1400x161.png" alt="" style="width: 100%; height: 35px">
+                <img src="https://hcmus.edu.vn/wp-content/uploads/2023/04/hcmus-logo-white.png" alt="" style="width: 100%; height: 35px">
+            <img src="https://www.math.hcmus.edu.vn/images/Logo-Math-CS.png" alt="" style=" width: 100%; height: 35px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -110,15 +111,15 @@
     @yield('content')
 
     <div class="contact-buttons">
-        <a href="https://www.facebook.com/fit.hcmus" class="btn-contact" target="_blank" title="Facebook">
+        <a href="https://www.facebook.com/khoatoantinhoc" class="btn-contact" target="_blank" title="Facebook">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/500px-Facebook_Logo_%282019%29.png"
                 style="width: 100%; height: 100%" alt="Messenger" class="contact-icon">
         </a>
-        <a href="https://zalo.me/0937734004" class="btn-contact" target="_blank" title="Zalo">
+        <a href="https://zalo.me/khoatoantinhoc?fbclid=IwY2xjawLQp3pleHRuA2FlbQIxMABicmlkETFldFZmbzFPTlF6Q0Y2Z0JMAR70FACSOj1_jZuV8Mms93BAxr1dXuSudzZX6ngHPibYYVqWOS8s5lCsRCFx1g_aem_XPv_PXQ5roFk6bBDU31v4A" class="btn-contact" target="_blank" title="Zalo">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/2048px-Icon_of_Zalo.svg.png"
                 style="width: 100%; height: 100%" alt="Zalo" class="contact-icon">
         </a>
-        <a href="mailto:info@fit.hcmus.edu.vn" class="btn-contact" title="Gmail">
+        <a href="mailto:math@hcmus.edu.vn" class="btn-contact" title="Gmail">
             <img src="https://images.vexels.com/media/users/3/140928/isolated/preview/8d338f5acd60bfbc9b5fb1b208c8814f-outlined-email-round-icon.png?w=360"
                 style="width: 100%; height: 100%" alt="Gmail" class="contact-icon">
         </a>
@@ -210,10 +211,11 @@
         <div class="container text-center text-md-start">
             <div class="row text-center text-md-start">
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <img src="https://tuyensinh.hcmus.edu.vn/wp-content/uploads/2024/11/logo-tuyen-sinh-nen-1400x161.png" alt="" style="width: 100%; height: 50px;">
+                    <img src="https://hcmus.edu.vn/wp-content/uploads/2023/04/hcmus-logo-white.png" alt="" style=" height: 90px;">
+                  <img src="https://www.math.hcmus.edu.vn/images/Logo-Math-CS.png" alt="" style=" height: 90px;">
                     <br>
                     <br>
-                    <p>Cổng thông tin hỗ trợ học viên cao học ngành Khoa học Dữ liệu - Đại học KHTN.</p>
+                    <p>Cổng thông tin hỗ trợ học viên cao học ngành Khoa học Dữ liệu - Đại học KHTN - ĐHQG HCM</p>
                 </div>
 
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
@@ -246,14 +248,14 @@
 
             <div class="row d-flex justify-content-between">
                 <div class="col-md-7 col-lg-8">
-                    <p class="text-white">© 2025 Khoa Toán - Tin học - Đại học Khoa học Tự Nhiên</p>
+                    <p class="text-white">© 2025 Khoa Toán - Tin học - Đại học Khoa học Tự Nhiên - ĐHQG HCM</p>
                 </div>
                 <div class="col-md-5 col-lg-4">
                     <div class="text-center text-md-end">
-                        <a href="#" class="text-white me-4"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-4"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/VNUHCM.US" class="text-white me-4"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@vnuhcmus" class="text-white me-4"><i class="fab fa-youtube"></i></a>
                         <a href="#" class="text-white me-4"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.linkedin.com/school/vnuhcm---university-of-science/" class="text-white"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>

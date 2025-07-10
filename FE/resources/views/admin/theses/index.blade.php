@@ -1,17 +1,17 @@
 @extends('admin.layouts.app')
-@section('title', 'Quản Lý Khóa Luận')
+@section('title', 'Quản Lý Luận Văn')
 
 @section('content')
 <section class="content-header">
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Quản Lý Khóa Luận</h1>
+                <h1>Quản Lý Luận Văn</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Trang Chủ</a></li>
-                    <li class="breadcrumb-item active">Khóa Luận</li>
+                    <li class="breadcrumb-item active">Luận Văn</li>
                 </ol>
             </div>
         </div>
@@ -77,7 +77,7 @@
                                     <form action="{{ route('admin.theses.destroy', $item['id']) }}" method="POST" style="display:inline;">
                                         @csrf
                                         @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Xóa khóa luận này?')">
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Xóa luận văn này?')">
                                             <i class="fas fa-trash"></i> Xóa
                                         </button>
                                     </form>
@@ -85,7 +85,7 @@
                             </tr>
                         @empty
                             <tr class="text-center">
-                                <td colspan="6">Không có khóa luận nào.</td>
+                                <td colspan="6">Không có luận văn nào.</td>
                             </tr>
                         @endforelse
                     </tbody>

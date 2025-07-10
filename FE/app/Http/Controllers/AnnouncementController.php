@@ -58,6 +58,7 @@ class AnnouncementController extends Controller
             'content' => 'required|string',
             'posted_at' => 'nullable|date',
             'cover_image' => 'nullable|image|max:2048',
+            
         ]);
 
         $token = session('jwt_token');
@@ -67,6 +68,8 @@ class AnnouncementController extends Controller
                 ['name' => 'title', 'contents' => $request->input('title')],
                 ['name' => 'content', 'contents' => $request->input('content')],
                 ['name' => 'posted_at', 'contents' => $request->input('posted_at')],
+                ['name' => 'category', 'contents' => $request->input('category')],
+
             ];
 
             if ($request->hasFile('cover_image')) {
@@ -125,6 +128,8 @@ class AnnouncementController extends Controller
                 ['name' => 'title', 'contents' => $request->input('title')],
                 ['name' => 'content', 'contents' => $request->input('content')],
                 ['name' => 'posted_at', 'contents' => $request->input('posted_at')],
+                ['name' => 'category', 'contents' => $request->input('category')],
+
             ];
 
             if ($request->hasFile('cover_image')) {

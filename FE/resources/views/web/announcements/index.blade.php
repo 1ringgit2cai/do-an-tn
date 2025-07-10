@@ -31,6 +31,13 @@
                                 <i class="fas fa-calendar-alt me-1"></i>
                                 {{ \Carbon\Carbon::parse($item['createdAt'])->format('d/m/Y') }}
                             </small>
+
+    @if (!empty($item['category']))
+        <small class="text-muted mb-2">
+            <i class="fas fa-folder me-1"></i> {{ $item['category'] }}
+        </small>
+    @endif
+
                             <p class="card-text text-muted" style="max-height: 4.5em; overflow: hidden;">
                                 {{ \Illuminate\Support\Str::limit(strip_tags($item['content']), 150) }}
                             </p>
